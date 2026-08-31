@@ -1,0 +1,452 @@
+/* ================= DESTINATIONS PAGE ================= */
+
+.destinations-page {
+  min-height: 100vh;
+  background: #060b18;
+  color: white;
+}
+
+/* ================= HERO ================= */
+
+.destinations-hero {
+  position: relative;
+
+  min-height: 58vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 150px max(6vw, 30px) 80px;
+
+  overflow: hidden;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  background:
+    radial-gradient(
+      circle at 75% 30%,
+      rgba(77, 225, 255, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 25% 70%,
+      rgba(108, 99, 255, 0.12),
+      transparent 35%
+    );
+}
+
+.destinations-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  right: -200px;
+  top: -250px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(77, 225, 255, 0.15);
+
+  box-shadow:
+    0 0 80px rgba(77, 225, 255, 0.08),
+    inset 0 0 80px rgba(108, 99, 255, 0.06);
+
+  pointer-events: none;
+}
+
+/* Decorative glowing orbs */
+
+.destinations-hero-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(90px);
+
+  pointer-events: none;
+
+  opacity: 0.25;
+}
+
+.glow-one {
+  width: 350px;
+  height: 350px;
+
+  top: -100px;
+  right: 15%;
+
+  background: #00cfff;
+
+  animation: destinationGlowOne 8s ease-in-out infinite;
+}
+
+.glow-two {
+  width: 300px;
+  height: 300px;
+
+  bottom: -100px;
+  left: 10%;
+
+  background: #756bff;
+
+  animation: destinationGlowTwo 10s ease-in-out infinite;
+}
+
+@keyframes destinationGlowOne {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-70px, 50px);
+  }
+}
+
+@keyframes destinationGlowTwo {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(60px, -40px);
+  }
+}
+
+/* ================= TEXT ================= */
+
+.destinations-hero .page-label {
+  position: relative;
+
+  z-index: 2;
+
+  color: #4de1ff;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 6px;
+
+  margin-bottom: 18px;
+}
+
+.destinations-hero h1 {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 750px;
+
+  margin: 0 0 22px;
+
+  font-size: clamp(3.5rem, 7vw, 7rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -4px;
+}
+
+.destinations-hero h1 span {
+  display: block;
+
+  margin-top: 8px;
+
+  background: linear-gradient(
+    90deg,
+    #756bff,
+    #4de1ff
+  );
+  padding-bottom: 10px;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.destinations-description {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 600px;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 1.1rem;
+
+  line-height: 1.8;
+}
+
+/* ================= CONTENT ================= */
+
+.destinations-content {
+  padding: 70px max(6vw, 30px) 120px;
+}
+
+/* ================= FILTERS ================= */
+
+.destination-filters {
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 50px;
+}
+
+.filter-btn {
+  padding: 12px 20px;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: rgba(255, 255, 255, 0.03);
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.9rem;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  color: white;
+
+  border-color: rgba(77, 225, 255, 0.5);
+
+  background: rgba(77, 225, 255, 0.08);
+}
+
+.filter-btn.active {
+  color: white;
+
+  border-color: transparent;
+
+  background: linear-gradient(
+    135deg,
+    #756bff,
+    #00cfff
+  );
+
+  box-shadow:
+    0 8px 30px rgba(0, 207, 255, 0.18);
+}
+
+/* ================= GRID ================= */
+
+.destinations-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+
+  perspective: 1200px;
+}
+/* ================= CARD ================= */
+
+.destination-page-card {
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(20, 30, 55, 0.9),
+    rgba(7, 12, 27, 0.95)
+  );
+
+  border: 3px solid rgba(255, 255, 255, 0.08);
+
+  transform-style: preserve-3d;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.destination-page-card:hover {
+  border-color: rgba(10, 214, 255, 0.959);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    0 0 35px rgba(77, 225, 255, 0.08);
+}
+
+/* ================= IMAGE ================= */
+
+.destination-image {
+  position: relative;
+
+  height: 240px;
+
+  overflow: hidden;
+}
+
+.destination-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.5s ease;
+}
+
+.destination-page-card:hover .destination-image img {
+  transform: scale(1.1);
+
+  filter: saturate(1.15);
+}
+
+.destination-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(5, 10, 22, 0.65),
+    transparent 65%
+  );
+}
+
+.destination-category {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  padding: 7px 13px;
+
+  border-radius: 999px;
+
+  color: #4de1ff;
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  background: rgba(5, 15, 35, 0.7);
+
+  border: 1px solid rgba(77, 225, 255, 0.25);
+
+  backdrop-filter: blur(10px);
+}
+
+/* ================= CARD CONTENT ================= */
+
+.destination-info {
+  padding: 24px;
+}
+
+.destination-location {
+  margin-bottom: 10px;
+
+  color: #4de1ff;
+
+  font-size: 0.85rem;
+}
+
+.destination-info h2 {
+  margin-bottom: 12px;
+
+  font-size: 1.65rem;
+
+  color: white;
+}
+
+.destination-text {
+  min-height: 72px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  line-height: 1.65;
+
+  font-size: 0.92rem;
+}
+
+.discover-btn {
+  margin-top: 18px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.discover-btn:hover {
+  color: #4de1ff;
+
+  transform: translateX(6px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .destinations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .destinations-hero {
+    min-height: 50vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .destinations-hero {
+    padding: 130px 25px 70px;
+  }
+
+  .destinations-hero h1 {
+    font-size: 3.5rem;
+
+    letter-spacing: -2px;
+  }
+
+  .destinations-content {
+    padding: 50px 25px 80px;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-filters {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 10px 15px;
+
+    font-size: 0.82rem;
+  }
+}
