@@ -382,6 +382,12 @@
 .discover-btn {
   margin-top: 18px;
 
+  display: inline-flex;
+  align-items: center;
+
+  text-decoration: none;
+
+
   padding: 0;
 
   border: none;

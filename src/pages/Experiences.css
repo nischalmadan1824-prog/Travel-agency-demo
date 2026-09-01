@@ -531,4 +531,32 @@
     visibility: visible;
     opacity: 1;
   }
+}.experience-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 20px;
+
+  border: 1px solid rgba(77, 225, 255, 0.3);
+  border-radius: 10px;
+
+  background: rgba(77, 225, 255, 0.08);
+
+  color: white;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.experience-action-button:hover {
+  background: rgba(77, 225, 255, 0.18);
+
+  border-color: #4de1ff;
+
+  transform: translateY(-3px);
 }

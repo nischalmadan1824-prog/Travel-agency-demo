@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Destinations.css";
 
@@ -205,12 +206,12 @@ function Destinations() {
                     {destination.description}
                   </p>
 
-                  <button
+                  <NavLink
+  to="/contact"
   className="discover-btn"
-  onClick={() => (window.location.href = "/contact")}
 >
   Discover Journey →
-</button>   
+</NavLink>   
                 </div>
               </motion.article>
             ))}

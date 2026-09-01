@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 import "./Experiences.css";
 
 import mountainsImg from "../assets/experiences/mountains.jpg";
@@ -111,11 +112,12 @@ function Experiences() {
                             breathtaking mountain landscapes.
                         </p>
 
-                        <button
-                            onClick={() => (window.location.href = "/contact")}
-                        >
-                            Explore Experience →
-                        </button>
+                       <NavLink
+  to="/contact"
+  className="experience-action-button"
+>
+  Explore Experience →
+</NavLink>
 
                     </div>
 
@@ -168,11 +170,12 @@ function Experiences() {
 
                                 <p>{experience.description}</p>
 
-                                <button
-                                    onClick={() => (window.location.href = "/contact")}
-                                >
-                                    Discover →
-                                </button>
+                                <NavLink
+  to="/contact"
+  className="experience-action-button"
+>
+  Discover →
+</NavLink>
 
                             </div>
 
