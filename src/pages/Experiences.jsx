@@ -9,35 +9,39 @@ import heritageImg from "../assets/experiences/heritage.jpg";
 
 function Experiences() {
     const experiences = [
-        {
-            title: "Mountain Adventures",
-            category: "ADVENTURE",
-            description:
-                "Trek through breathtaking landscapes, explore hidden trails and experience the mountains like never before.",
-            image: mountainsImg,
-        },
-        {
-            title: "Beach Escapes",
-            category: "RELAXATION",
-            description:
-                "Slow down, chase sunsets and enjoy peaceful moments beside the sea.",
-            image: beachImg,
-        },
-        {
-            title: "Camp Under The Stars",
-            category: "CAMPING",
-            description:
-                "Escape the city and spend unforgettable nights surrounded by nature.",
-            image: campingImg,
-        },
-        {
-            title: "Stories From The Past",
-            category: "HERITAGE",
-            description:
-                "Walk through ancient cities, magnificent architecture and stories that shaped India.",
-            image: heritageImg,
-        },
-    ];
+    {
+        title: "Mountain Adventures",
+        category: "ADVENTURE",
+        description:
+            "Trek through breathtaking landscapes, explore hidden trails and experience the mountains like never before.",
+        image: mountainsImg,
+        filter: "Mountains",
+    },
+    {
+        title: "Beach Escapes",
+        category: "RELAXATION",
+        description:
+            "Slow down, chase sunsets and enjoy peaceful moments beside the sea.",
+        image: beachImg,
+        filter: "Beaches",
+    },
+    {
+        title: "Camp Under The Stars",
+        category: "CAMPING",
+        description:
+            "Escape the city and spend unforgettable nights surrounded by nature.",
+        image: campingImg,
+        filter: "Nature",
+    },
+    {
+        title: "Stories From The Past",
+        category: "HERITAGE",
+        description:
+            "Walk through ancient cities, magnificent architecture and stories that shaped India.",
+        image: heritageImg,
+        filter: "Heritage",
+    },
+];
 
     return (
         <main className="experiences-page">
@@ -113,10 +117,10 @@ function Experiences() {
                         </p>
 
                        <NavLink
-  to="/contact"
-  className="experience-action-button"
+    to="/destinations?category=Mountains"
+    className="experience-action-button"
 >
-  Explore Experience →
+    Explore Experience →
 </NavLink>
 
                     </div>
@@ -171,10 +175,10 @@ function Experiences() {
                                 <p>{experience.description}</p>
 
                                 <NavLink
-  to="/contact"
-  className="experience-action-button"
+    to={`/destinations?category=${experience.filter}`}
+    className="experience-action-button"
 >
-  Discover →
+    Explore {experience.title} →
 </NavLink>
 
                             </div>

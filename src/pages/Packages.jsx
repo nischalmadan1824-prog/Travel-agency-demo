@@ -4,46 +4,52 @@ import "./Packages.css";
 
 function Packages() {
   const packages = [
-    {
-      name: "Explorer",
-      price: "₹12,999",
-      duration: "3 Nights / 4 Days",
-      description: "A quick escape for travelers who love discovering new places.",
-      features: [
-        "Comfortable hotel stay",
-        "Daily breakfast",
-        "Local sightseeing",
-        "Airport / station pickup",
-      ],
-    },
-    {
-      name: "Adventurer",
-      price: "₹24,999",
-      duration: "5 Nights / 6 Days",
-      description: "The perfect balance of adventure, comfort and exploration.",
-      popular: true,
-      features: [
-        "Premium hotel stay",
-        "Daily breakfast",
-        "Guided experiences",
-        "Private transportation",
-        "Adventure activity",
-      ],
-    },
-    {
-      name: "Wanderer",
-      price: "₹39,999",
-      duration: "7 Nights / 8 Days",
-      description: "A complete journey designed for unforgettable experiences.",
-      features: [
-        "Luxury accommodation",
-        "All meals included",
-        "Curated experiences",
-        "Private transportation",
-        "Dedicated travel support",
-      ],
-    },
-  ];
+  {
+    name: "Explorer",
+    price: "₹12,999",
+    duration: "3 Nights / 4 Days",
+    description:
+      "A quick escape for travelers who love discovering new places.",
+    category: "Beaches",
+    features: [
+      "Comfortable hotel stay",
+      "Daily breakfast",
+      "Local sightseeing",
+      "Airport / station pickup",
+    ],
+  },
+  {
+    name: "Adventurer",
+    price: "₹24,999",
+    duration: "5 Nights / 6 Days",
+    description:
+      "The perfect balance of adventure, comfort and exploration.",
+    category: "Mountains",
+    popular: true,
+    features: [
+      "Premium hotel stay",
+      "Daily breakfast",
+      "Guided experiences",
+      "Private transportation",
+      "Adventure activity",
+    ],
+  },
+  {
+    name: "Wanderer",
+    price: "₹39,999",
+    duration: "7 Nights / 8 Days",
+    description:
+      "A complete journey designed for unforgettable experiences.",
+    category: "Heritage",
+    features: [
+      "Luxury accommodation",
+      "All meals included",
+      "Curated experiences",
+      "Private transportation",
+      "Dedicated travel support",
+    ],
+  },
+];
 
   return (
     <main className="packages-page">
@@ -146,12 +152,11 @@ function Packages() {
               </ul>
 
               <NavLink
-  to="/contact"
+  to={`/destinations?category=${pkg.category}`}
   className="package-button"
 >
   Explore Package →
 </NavLink>
-
             </motion.article>
 
           ))}

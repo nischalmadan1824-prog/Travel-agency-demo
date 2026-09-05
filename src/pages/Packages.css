@@ -1,38 +1,44 @@
-/* ================= PACKAGES PAGE ================= */
+/* =====================================================
+   NOMADIX — PACKAGES PAGE
+   Premium Travel Editorial Style
+===================================================== */
 
 .packages-page {
   min-height: 100vh;
-  background: #050914;
-  color: white;
+  background: var(--cream);
+  color: var(--text);
   overflow: hidden;
 }
 
-/* ================= HERO ================= */
+/* =====================================================
+   HERO
+===================================================== */
 
 .packages-hero {
   position: relative;
 
-  min-height: 52vh;
+  min-height: 68vh;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  padding: 150px max(6vw, 30px) 80px;
+  padding: 150px max(7vw, 30px) 100px;
 
   overflow: hidden;
 
   background:
     radial-gradient(
-      circle at 75% 30%,
-      rgba(77, 225, 255, 0.12),
+      circle at 82% 25%,
+      rgba(244, 177, 131, 0.28),
       transparent 30%
     ),
     radial-gradient(
-      circle at 20% 70%,
-      rgba(117, 107, 255, 0.12),
-      transparent 35%
-    );
+      circle at 15% 75%,
+      rgba(135, 155, 120, 0.18),
+      transparent 32%
+    ),
+    var(--cream);
 }
 
 /* Decorative rings */
@@ -42,59 +48,79 @@
 
   position: absolute;
 
-  width: 600px;
-  height: 600px;
+  width: 620px;
+  height: 620px;
 
-  right: -200px;
+  right: -250px;
   top: -250px;
 
-  border: 1px solid rgba(77, 225, 255, 0.12);
+  border: 1px solid rgba(74, 48, 39, 0.09);
 
   border-radius: 50%;
 
   box-shadow:
-    0 0 100px rgba(77, 225, 255, 0.05),
-    inset 0 0 80px rgba(117, 107, 255, 0.05);
+    0 0 100px rgba(228, 123, 85, 0.05),
+    inset 0 0 90px rgba(135, 155, 120, 0.04);
 
   pointer-events: none;
 }
 
-/* ================= GLOWS ================= */
+.packages-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  right: -80px;
+  top: -120px;
+
+  border: 1px solid rgba(74, 48, 39, 0.06);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+/* =====================================================
+   GLOWS
+===================================================== */
 
 .package-glow {
   position: absolute;
 
   border-radius: 50%;
 
-  filter: blur(100px);
-
-  opacity: 0.25;
+  filter: blur(90px);
 
   pointer-events: none;
+
+  opacity: 0.35;
 }
 
 .package-glow-one {
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  height: 320px;
 
   right: 20%;
   top: -100px;
 
-  background: #756bff;
+  background: rgba(244, 177, 131, 0.5);
 
-  animation: packageGlowOne 9s ease-in-out infinite;
+  animation: packageGlowOne 10s ease-in-out infinite;
 }
 
 .package-glow-two {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
 
   left: 10%;
   bottom: -150px;
 
-  background: #00d4ff;
+  background: rgba(135, 155, 120, 0.4);
 
-  animation: packageGlowTwo 11s ease-in-out infinite;
+  animation: packageGlowTwo 12s ease-in-out infinite;
 }
 
 @keyframes packageGlowOne {
@@ -104,7 +130,7 @@
   }
 
   50% {
-    transform: translate(-70px, 50px);
+    transform: translate(-60px, 45px);
   }
 }
 
@@ -115,26 +141,28 @@
   }
 
   50% {
-    transform: translate(70px, -40px);
+    transform: translate(65px, -40px);
   }
 }
 
-/* ================= HERO TEXT ================= */
+/* =====================================================
+   HERO TEXT
+===================================================== */
 
 .packages-hero .page-label {
   position: relative;
 
   z-index: 2;
 
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 
-  color: #4de1ff;
+  color: var(--terracotta);
 
-  font-size: 0.78rem;
+  font-size: 10px;
 
   font-weight: 700;
 
-  letter-spacing: 6px;
+  letter-spacing: 3px;
 }
 
 .packages-hero h1 {
@@ -142,13 +170,19 @@
 
   z-index: 2;
 
-  max-width: 800px;
+  max-width: 900px;
 
-  margin: 0 0 22px;
+  margin: 0 0 28px;
 
-  font-size: clamp(3.5rem, 7vw, 7rem);
+  color: var(--dark-green);
 
-  line-height: 0.95;
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(55px, 8vw, 105px);
+
+  font-weight: 600;
+
+  line-height: 0.92;
 
   letter-spacing: -4px;
 }
@@ -156,16 +190,11 @@
 .packages-hero h1 span {
   display: block;
 
-  background: linear-gradient(
-    90deg,
-    #756bff,
-    #4de1ff
-  );
+  color: var(--terracotta);
 
-  -webkit-background-clip: text;
-  background-clip: text;
+  font-style: italic;
 
-  color: transparent;
+  font-weight: 500;
 }
 
 .packages-description {
@@ -175,19 +204,21 @@
 
   max-width: 600px;
 
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--muted);
 
-  font-size: 1.1rem;
+  font-size: 15px;
 
   line-height: 1.8;
 }
 
-/* ================= PACKAGES SECTION ================= */
+/* =====================================================
+   PACKAGES SECTION
+===================================================== */
 
 .packages-section {
-  padding: 70px max(6vw, 30px) 120px;
+  padding: 90px max(7vw, 30px) 130px;
 
-  background: #050914;
+  background: var(--cream);
 }
 
 .packages-grid {
@@ -195,14 +226,16 @@
 
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 25px;
+  gap: 24px;
 
   max-width: 1200px;
 
   margin: 0 auto;
 }
 
-/* ================= PACKAGE CARD ================= */
+/* =====================================================
+   PACKAGE CARD
+===================================================== */
 
 .package-card {
   position: relative;
@@ -215,18 +248,18 @@
 
   padding: 35px;
 
-  border-radius: 25px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(20, 30, 55, 0.9),
-      rgba(7, 12, 27, 0.96)
-    );
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
   overflow: hidden;
+
+  border: 1px solid rgba(74, 48, 39, 0.08);
+
+  border-radius: 4px;
+
+  background: var(--white);
+
+  box-shadow:
+    0 8px 25px rgba(74, 48, 39, 0.05);
+
+  transform-style: preserve-3d;
 
   transition:
     border-color 0.4s ease,
@@ -238,21 +271,23 @@
 
   position: absolute;
 
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
 
-  top: -100px;
+  top: -120px;
   right: -100px;
 
   border-radius: 50%;
 
-  background: rgba(77, 225, 255, 0.1);
+  background: rgba(244, 177, 131, 0.3);
 
   filter: blur(50px);
 
   opacity: 0;
 
   transition: 0.5s ease;
+
+  pointer-events: none;
 }
 
 .package-card:hover::before {
@@ -260,27 +295,21 @@
 }
 
 .package-card:hover {
-  border-color: rgba(77, 225, 255, 0.35);
+  border-color: rgba(228, 123, 85, 0.25);
 
   box-shadow:
-    0 25px 60px rgba(0, 0, 0, 0.4),
-    0 0 40px rgba(77, 225, 255, 0.08);
+    0 25px 60px rgba(74, 48, 39, 0.12);
 }
 
-/* ================= POPULAR CARD ================= */
+/* =====================================================
+   POPULAR PACKAGE
+===================================================== */
 
 .popular-package {
-  border-color: rgba(77, 225, 255, 0.4);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(24, 35, 65, 0.95),
-      rgba(7, 15, 32, 0.98)
-    );
+  border-color: rgba(228, 123, 85, 0.35);
 
   box-shadow:
-    0 20px 60px rgba(0, 212, 255, 0.08);
+    0 20px 55px rgba(74, 48, 39, 0.1);
 }
 
 .popular-package::after {
@@ -290,24 +319,9 @@
 
   inset: 0;
 
-  border-radius: 25px;
+  border: 1px solid rgba(228, 123, 85, 0.2);
 
-  padding: 1px;
-
-  background: linear-gradient(
-    135deg,
-    rgba(117, 107, 255, 0.5),
-    rgba(77, 225, 255, 0.5),
-    transparent
-  );
-
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-
-  -webkit-mask-composite: xor;
-
-  mask-composite: exclude;
+  border-radius: 4px;
 
   pointer-events: none;
 }
@@ -320,25 +334,29 @@
 
   padding: 7px 12px;
 
-  border-radius: 20px;
+  border-radius: 30px;
 
-  color: #06101d;
+  background: var(--terracotta);
 
-  background: #4de1ff;
+  color: white;
 
-  font-size: 0.65rem;
+  font-size: 8px;
 
   font-weight: 800;
 
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
-/* ================= PACKAGE TOP ================= */
+/* =====================================================
+   PACKAGE TOP
+===================================================== */
 
 .package-number {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(74, 48, 39, 0.35);
 
-  font-size: 0.75rem;
+  font-size: 9px;
+
+  font-weight: 700;
 
   letter-spacing: 3px;
 }
@@ -346,33 +364,41 @@
 .package-top h2 {
   margin: 25px 0 12px;
 
-  font-size: 2rem;
+  color: var(--dark-green);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 35px;
+
+  font-weight: 600;
 }
 
 .package-top p {
   min-height: 75px;
 
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--muted);
 
-  line-height: 1.6;
+  line-height: 1.7;
 
-  font-size: 0.9rem;
+  font-size: 12px;
 }
 
-/* ================= PRICE ================= */
+/* =====================================================
+   PRICE
+===================================================== */
 
 .package-price {
   display: flex;
 
   flex-direction: column;
 
-  margin-top: 25px;
+  margin-top: 28px;
 }
 
 .package-price span {
-  color: #4de1ff;
+  color: var(--gold);
 
-  font-size: 0.65rem;
+  font-size: 8px;
 
   font-weight: 700;
 
@@ -382,25 +408,26 @@
 .package-price strong {
   margin: 5px 0;
 
-  font-size: 2.7rem;
+  color: var(--dark-green);
 
-  background: linear-gradient(
-    90deg,
-    #ffffff,
-    #4de1ff
-  );
+  font-family: "Playfair Display", serif;
 
-  -webkit-background-clip: text;
-  background-clip: text;
+  font-size: 40px;
 
-  color: transparent;
+  font-weight: 600;
+
+  line-height: 1;
 }
 
 .package-price small {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--muted);
+
+  font-size: 10px;
 }
 
-/* ================= DIVIDER ================= */
+/* =====================================================
+   DIVIDER
+===================================================== */
 
 .package-divider {
   width: 100%;
@@ -409,10 +436,12 @@
 
   margin: 25px 0;
 
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(74, 48, 39, 0.1);
 }
 
-/* ================= FEATURES ================= */
+/* =====================================================
+   FEATURES
+===================================================== */
 
 .package-card ul {
   display: flex;
@@ -435,18 +464,20 @@
 
   gap: 10px;
 
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--muted);
 
-  font-size: 0.88rem;
+  font-size: 11px;
 }
 
 .package-card li span {
-  color: #4de1ff;
+  color: var(--terracotta);
 
   font-weight: 700;
 }
 
-/* ================= BUTTON ================= */
+/* =====================================================
+   BUTTON
+===================================================== */
 
 .package-button {
   width: 100%;
@@ -455,15 +486,27 @@
 
   padding: 14px 20px;
 
-  border: 1px solid rgba(77, 225, 255, 0.25);
+  display: flex;
 
-  border-radius: 12px;
+  align-items: center;
 
-  background: rgba(77, 225, 255, 0.06);
+  justify-content: center;
 
-  color: white;
+  text-decoration: none;
 
-  font-weight: 600;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(74, 48, 39, 0.15);
+
+  border-radius: 50px;
+
+  background: transparent;
+
+  color: var(--dark-green);
+
+  font-size: 10px;
+
+  font-weight: 700;
 
   cursor: pointer;
 
@@ -471,21 +514,21 @@
 }
 
 .package-button:hover {
-  background: linear-gradient(
-    135deg,
-    #756bff,
-    #00cfff
-  );
+  background: var(--terracotta);
 
-  border-color: transparent;
+  border-color: var(--terracotta);
+
+  color: white;
 
   transform: translateY(-3px);
 
   box-shadow:
-    0 12px 30px rgba(0, 207, 255, 0.2);
+    0 12px 30px rgba(228, 123, 85, 0.2);
 }
 
-/* ================= RESPONSIVE ================= */
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
 @media (max-width: 1000px) {
   .packages-grid {
@@ -501,51 +544,36 @@
 
 @media (max-width: 600px) {
   .packages-hero {
-    min-height: 50vh;
+    min-height: 58vh;
 
-    padding: 130px 25px 70px;
+    padding: 125px 25px 75px;
   }
 
   .packages-hero h1 {
-    font-size: 3.5rem;
+    font-size: 52px;
 
-    letter-spacing: -2px;
+    letter-spacing: -3px;
+  }
+
+  .packages-description {
+    max-width: 90%;
+
+    font-size: 13px;
   }
 
   .packages-section {
-    padding: 50px 20px 80px;
+    padding: 65px 20px 85px;
   }
 
   .package-card {
     padding: 28px;
   }
-}
-.package-button {
-  width: 100%;
 
-  margin-top: auto;
+  .package-top h2 {
+    font-size: 32px;
+  }
 
-  padding: 14px 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-decoration: none;
-
-  box-sizing: border-box;
-
-  border: 1px solid rgba(77, 225, 255, 0.25);
-
-  border-radius: 12px;
-
-  background: rgba(77, 225, 255, 0.06);
-
-  color: white;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition: 0.3s ease;
+  .package-price strong {
+    font-size: 36px;
+  }
 }

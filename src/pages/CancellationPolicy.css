@@ -1,0 +1,428 @@
+.cancellation-page {
+  min-height: 100vh;
+  background: var(--cream);
+  overflow: hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.cancellation-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 24px 80px;
+  background:
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(244, 177, 131, 0.32),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(135, 155, 120, 0.25),
+      transparent 30%
+    ),
+    var(--cream);
+}
+
+.cancellation-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+
+.cancellation-eyebrow,
+.section-label {
+  color: var(--terracotta);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-bottom: 18px;
+}
+
+.cancellation-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.98;
+  color: var(--dark-green);
+}
+
+.cancellation-hero h1 span {
+  display: block;
+  color: var(--terracotta);
+  font-style: italic;
+}
+
+.cancellation-hero-content > p:last-child {
+  max-width: 600px;
+  margin: 28px auto 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.cancellation-orbit {
+  position: absolute;
+  border: 1px solid rgba(217, 164, 65, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cancellation-orbit-one {
+  width: 420px;
+  height: 420px;
+  right: -130px;
+  top: 30px;
+}
+
+.cancellation-orbit-two {
+  width: 250px;
+  height: 250px;
+  left: -80px;
+  bottom: -70px;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.cancellation-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 90px 24px 55px;
+  text-align: center;
+}
+
+.cancellation-intro h2,
+.cancellation-heading h2,
+.refund-card h2,
+.conditions-heading h2,
+.cancellation-cta h2 {
+  font-family: "Playfair Display", serif;
+  color: var(--dark-green);
+  line-height: 1.08;
+}
+
+.cancellation-intro h2 {
+  font-size: clamp(2.5rem, 5vw, 4.3rem);
+}
+
+.cancellation-intro h2 span,
+.cancellation-heading h2 span,
+.refund-card h2 span,
+.conditions-heading h2 span,
+.cancellation-cta h2 span {
+  color: var(--terracotta);
+  font-style: italic;
+}
+
+.cancellation-intro > p:last-child {
+  max-width: 620px;
+  margin: 22px auto 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.cancellation-timeline {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 90px 24px 110px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 90px;
+}
+
+.cancellation-heading h2 {
+  max-width: 470px;
+  font-size: clamp(2.7rem, 4.5vw, 4.5rem);
+}
+
+.cancellation-heading > p:last-child {
+  max-width: 430px;
+  margin-top: 22px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.cancellation-steps {
+  border-top: 1px solid rgba(74, 48, 39, 0.12);
+}
+
+.cancellation-step {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+  padding: 27px 0;
+  border-bottom: 1px solid rgba(74, 48, 39, 0.12);
+  transition: transform 0.25s ease;
+}
+
+.step-number {
+  color: var(--terracotta);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.cancellation-step h3 {
+  color: var(--dark-green);
+  font-family: "Playfair Display", serif;
+  font-size: 1.35rem;
+}
+
+.cancellation-step p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   REFUND
+========================= */
+
+.refund-section {
+  padding: 100px 24px;
+  background: var(--sand);
+}
+
+.refund-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 55px;
+  border-radius: 25px;
+  background: var(--white);
+  box-shadow: 0 25px 65px rgba(74, 48, 39, 0.08);
+}
+
+.refund-icon {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--terracotta);
+  font-size: 1.4rem;
+}
+
+.refund-card h2 {
+  max-width: 600px;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.refund-list {
+  margin-top: 45px;
+  border-top: 1px solid rgba(74, 48, 39, 0.12);
+}
+
+.refund-list > div {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(74, 48, 39, 0.12);
+}
+
+.refund-list span {
+  color: var(--terracotta);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.refund-list p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   CONDITIONS
+========================= */
+
+.cancellation-conditions {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 110px 24px;
+}
+
+.conditions-heading h2 {
+  max-width: 600px;
+  font-size: clamp(2.7rem, 5vw, 4.5rem);
+}
+
+.conditions-grid {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.condition-card {
+  padding: 32px;
+  min-height: 270px;
+  border-radius: 20px;
+  background: var(--white);
+  border: 1px solid rgba(74, 48, 39, 0.06);
+  box-shadow: 0 18px 45px rgba(74, 48, 39, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.condition-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 55px rgba(74, 48, 39, 0.1);
+}
+
+.condition-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--sand);
+  color: var(--terracotta);
+  font-weight: 700;
+}
+
+.condition-card h3 {
+  font-family: "Playfair Display", serif;
+  color: var(--dark-green);
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+}
+
+.condition-card p {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cancellation-cta {
+  max-width: 1150px;
+  margin: 0 auto 100px;
+  padding: 60px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  background:
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(244, 177, 131, 0.3),
+      transparent 28%
+    ),
+    var(--dark-green);
+}
+
+.cancellation-cta .section-label {
+  color: var(--peach);
+}
+
+.cancellation-cta h2 {
+  max-width: 650px;
+  color: white;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+}
+
+.cancellation-cta-button {
+  flex-shrink: 0;
+  padding: 16px 25px;
+  border-radius: 30px;
+  background: var(--white);
+  color: var(--dark-green);
+  font-weight: 600;
+  transition: transform 0.25s ease;
+}
+
+.cancellation-cta-button:hover {
+  transform: translateY(-4px);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .cancellation-timeline {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .conditions-grid {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+  }
+
+  .cancellation-cta {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cancellation-hero {
+    min-height: 52vh;
+    padding: 90px 20px 60px;
+  }
+
+  .cancellation-hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .cancellation-intro {
+    padding: 70px 20px 35px;
+  }
+
+  .cancellation-timeline {
+    padding: 70px 20px;
+  }
+
+  .refund-section {
+    padding: 70px 20px;
+  }
+
+  .refund-card {
+    padding: 30px 22px;
+    border-radius: 18px;
+  }
+
+  .cancellation-conditions {
+    padding: 75px 20px;
+  }
+
+  .condition-card {
+    min-height: 240px;
+  }
+
+  .cancellation-cta {
+    margin-bottom: 70px;
+    padding: 40px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cancellation-cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}

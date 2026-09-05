@@ -1,0 +1,958 @@
+/* =========================================
+   NOMADIX JOURNEY PAGE
+   ========================================= */
+
+.journey-page {
+  background: #fffaf2;
+  color: var(--text);
+  overflow: hidden;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.journey-hero {
+  position: relative;
+  height: 720px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.journey-hero-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1.03);
+
+  animation: journeyHeroZoom 12s ease-out forwards;
+}
+
+@keyframes journeyHeroZoom {
+  from {
+    transform: scale(1.08);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.journey-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(35,23,17,.72),
+      rgba(35,23,17,.08) 65%,
+      rgba(35,23,17,.18)
+    );
+}
+
+.journey-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  padding: 0 7vw 85px;
+
+  color: white;
+}
+
+.journey-eyebrow {
+  font-size: .6rem;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+}
+
+.journey-hero h1 {
+  margin-top: 18px;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(5rem, 10vw, 10rem);
+  line-height: .8;
+  font-weight: 500;
+
+  letter-spacing: -5px;
+}
+
+.journey-hero p {
+  margin-top: 25px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-style: italic;
+
+  color: rgba(255,250,242,.9);
+}
+
+.journey-hero-number {
+  position: absolute;
+  right: 7vw;
+  bottom: 85px;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+}
+
+.journey-hero-number span {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+}
+
+.journey-hero-number small {
+  margin-top: 5px;
+
+  font-size: .5rem;
+  letter-spacing: 1.5px;
+}
+
+/* =========================================
+   COMMON
+   ========================================= */
+
+.journey-label {
+  display: inline-block;
+
+  color: var(--terracotta);
+
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.journey-summary h2,
+.journey-section-heading h2,
+.journey-included-content h2,
+.journey-booking h2,
+.journey-back h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  line-height: .95;
+}
+
+.journey-summary h2 em,
+.journey-section-heading h2 em,
+.journey-included-content h2 em,
+.journey-booking h2 em,
+.journey-back h2 em {
+  color: var(--terracotta);
+  font-style: italic;
+}
+
+/* =========================================
+   SUMMARY
+   ========================================= */
+
+.journey-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 90px;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 110px 7vw;
+}
+
+.journey-summary-intro h2 {
+  margin-top: 18px;
+
+  font-size: clamp(3.3rem, 5vw, 5rem);
+}
+
+.journey-summary-intro p {
+  max-width: 480px;
+
+  margin-top: 28px;
+
+  color: var(--muted);
+
+  font-size: .88rem;
+  line-height: 1.8;
+}
+
+.journey-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 1px;
+
+  align-self: center;
+
+  background: rgba(74,48,39,.12);
+}
+
+.journey-fact {
+  min-height: 145px;
+
+  padding: 25px;
+
+  background: #fffaf2;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.journey-fact:last-child {
+  grid-column: span 2;
+}
+
+.journey-fact > span {
+  color: var(--terracotta);
+  font-size: 1.2rem;
+}
+
+.journey-fact small {
+  margin-top: auto;
+
+  color: #9a8d84;
+
+  font-size: .48rem;
+  letter-spacing: 1.5px;
+}
+
+.journey-fact strong {
+  margin-top: 6px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+/* =========================================
+   HIGHLIGHTS
+   ========================================= */
+
+.journey-highlights {
+  padding: 110px 7vw 120px;
+
+  background: #f5e7d5;
+}
+
+.journey-section-heading {
+  max-width: 1250px;
+  margin: 0 auto 55px;
+}
+
+.journey-section-heading h2 {
+  margin-top: 18px;
+
+  font-size: clamp(3.3rem, 5vw, 5rem);
+}
+
+.journey-highlight-grid {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+
+  perspective: 1200px;
+}
+
+.journey-highlight {
+  position: relative;
+
+  min-height: 190px;
+
+  padding: 22px;
+
+  border: 1px solid rgba(74,48,39,.12);
+  border-radius: 18px;
+
+  background: rgba(255,250,242,.55);
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform .5s ease,
+    box-shadow .5s ease;
+}
+
+.journey-highlight:hover {
+  box-shadow: 0 20px 40px rgba(70,50,35,.12);
+}
+
+.journey-highlight > span {
+  color: var(--terracotta);
+
+  font-size: .55rem;
+  letter-spacing: 1px;
+}
+
+.journey-highlight h3 {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.journey-highlight b {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+  color: var(--terracotta);
+
+  font-weight: 400;
+}
+
+/* =========================================
+   ITINERARY
+   ========================================= */
+
+.journey-itinerary {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 120px 7vw;
+}
+
+.itinerary-list {
+  border-top: 1px solid rgba(74,48,39,.15);
+}
+
+.itinerary-item {
+  display: grid;
+
+  grid-template-columns: 120px 1fr 35px;
+
+  gap: 40px;
+
+  align-items: center;
+
+  padding: 35px 5px;
+
+  border-bottom: 1px solid rgba(74,48,39,.15);
+
+  transition:
+    padding .4s ease,
+    background .4s ease,
+    transform .4s ease;
+}
+
+.itinerary-item:hover {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background: rgba(228,123,85,.045);
+
+  transform: translateX(5px);
+}
+
+.itinerary-day {
+  display: flex;
+  flex-direction: column;
+
+  color: #9a8d84;
+
+  font-size: .5rem;
+  letter-spacing: 1.5px;
+}
+
+.itinerary-day strong {
+  margin-top: 4px;
+
+  font-family: "Playfair Display", serif;
+
+  color: var(--terracotta);
+
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.itinerary-content h3 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.65rem;
+  font-weight: 500;
+}
+
+.itinerary-content p {
+  max-width: 700px;
+
+  margin-top: 8px;
+
+  color: var(--muted);
+
+  font-size: .76rem;
+  line-height: 1.7;
+}
+
+.itinerary-arrow {
+  color: var(--terracotta);
+
+  font-size: 1.1rem;
+
+  transition: transform .4s ease;
+}
+
+.itinerary-item:hover .itinerary-arrow {
+  transform: translateX(6px);
+}
+
+/* =========================================
+   INCLUDED
+   ========================================= */
+
+.journey-included {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background: #4a3027;
+
+  color: #fffaf2;
+}
+
+.journey-included-image {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+}
+
+.journey-included-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 1s ease;
+}
+
+.journey-included:hover .journey-included-image img {
+  transform: scale(1.05);
+}
+
+.included-image-caption {
+  position: absolute;
+
+  left: 40px;
+  bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.included-image-caption span {
+  font-size: .52rem;
+  letter-spacing: 2px;
+}
+
+.included-image-caption strong {
+  font-family: "Playfair Display", serif;
+
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.journey-included-content {
+  padding: 90px 8vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.journey-included-content .journey-label {
+  color: #f4b183;
+}
+
+.journey-included-content h2 {
+  margin-top: 18px;
+
+  font-size: clamp(2.8rem, 4vw, 4.5rem);
+}
+
+.journey-included-content h2 em {
+  color: #f4b183;
+}
+
+.included-list {
+  margin-top: 40px;
+
+  border-top: 1px solid rgba(255,250,242,.15);
+}
+
+.included-list > div {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 17px 0;
+
+  border-bottom: 1px solid rgba(255,250,242,.15);
+}
+
+.included-list span {
+  color: #f4b183;
+}
+
+.included-list p {
+  color: rgba(255,250,242,.78);
+
+  font-size: .78rem;
+}
+
+.included-note {
+  margin-top: 35px;
+  padding: 18px;
+
+  border-radius: 12px;
+
+  background: rgba(255,250,242,.06);
+}
+
+.included-note span {
+  color: #f4b183;
+
+  font-size: .48rem;
+  letter-spacing: 1.5px;
+}
+
+.included-note p {
+  margin-top: 8px;
+
+  color: rgba(255,250,242,.55);
+
+  font-size: .62rem;
+  line-height: 1.6;
+}
+
+/* =========================================
+   BOOKING
+   ========================================= */
+
+.journey-booking {
+  position: relative;
+
+  min-height: 600px;
+
+  padding: 120px 7vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(228,123,85,.16),
+      transparent 45%
+    ),
+    #fffaf2;
+
+  overflow: hidden;
+}
+
+.booking-orbit {
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  border: 1px solid rgba(228,123,85,.14);
+
+  border-radius: 50%;
+
+  animation: bookingOrbit 8s ease-in-out infinite;
+}
+
+.booking-orbit::before,
+.booking-orbit::after {
+  content: "";
+
+  position: absolute;
+
+  border: 1px solid rgba(217,164,65,.14);
+
+  border-radius: 50%;
+}
+
+.booking-orbit::before {
+  inset: 35px;
+}
+
+.booking-orbit::after {
+  inset: 70px;
+}
+
+.booking-orbit span {
+  position: absolute;
+
+  right: 10px;
+  top: 45px;
+
+  color: var(--gold);
+}
+
+@keyframes bookingOrbit {
+  0%,100% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(8deg) scale(1.03);
+  }
+}
+
+.journey-booking > *:not(.booking-orbit) {
+  position: relative;
+  z-index: 2;
+}
+
+.journey-booking h2 {
+  margin-top: 18px;
+
+  font-size: clamp(3.5rem, 6vw, 6rem);
+}
+
+.booking-price {
+  margin-top: 30px;
+
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+
+.booking-price small {
+  color: #9a8d84;
+
+  font-size: .5rem;
+  letter-spacing: 1px;
+}
+
+.booking-price strong {
+  font-family: "Playfair Display", serif;
+
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+
+.booking-price span {
+  color: #9a8d84;
+
+  font-size: .55rem;
+}
+
+.journey-book-button {
+  margin-top: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 15px 24px;
+
+  border: 0;
+  border-radius: 30px;
+
+  background: var(--terracotta);
+  color: white;
+
+  font-size: .68rem;
+  font-weight: 600;
+
+  box-shadow:
+    0 15px 35px rgba(228,123,85,.23);
+
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+}
+
+.journey-book-button:hover {
+  transform: translateY(-5px) scale(1.02);
+
+  box-shadow:
+    0 22px 45px rgba(228,123,85,.3);
+}
+
+.booking-note {
+  margin-top: 15px;
+
+  color: #9a8d84;
+
+  font-size: .56rem;
+}
+
+/* =========================================
+   FAQ
+   ========================================= */
+
+.journey-faq {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 110px 7vw;
+}
+
+.faq-list {
+  border-top: 1px solid rgba(74,48,39,.15);
+}
+
+.faq-list details {
+  border-bottom: 1px solid rgba(74,48,39,.15);
+}
+
+.faq-list summary {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 25px 5px;
+
+  cursor: pointer;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.25rem;
+
+  transition:
+    color .3s ease,
+    padding .3s ease;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary span {
+  color: var(--terracotta);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 1.3rem;
+
+  transition: transform .3s ease;
+}
+
+.faq-list details[open] summary {
+  color: var(--terracotta);
+}
+
+.faq-list details[open] summary span {
+  transform: rotate(45deg);
+}
+
+.faq-list details p {
+  max-width: 720px;
+
+  padding: 0 5px 25px;
+
+  color: var(--muted);
+
+  font-size: .76rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   BACK
+   ========================================= */
+
+.journey-back {
+  min-height: 470px;
+
+  padding: 100px 7vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: #f5e7d5;
+}
+
+.journey-back h2 {
+  margin-top: 18px;
+
+  font-size: clamp(3.5rem, 6vw, 6rem);
+}
+
+.journey-back-button {
+  margin-top: 35px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 13px 21px;
+
+  border: 1px solid rgba(74,48,39,.2);
+  border-radius: 30px;
+
+  font-size: .65rem;
+  font-weight: 600;
+
+  transition:
+    background .35s ease,
+    color .35s ease,
+    transform .35s ease;
+}
+
+.journey-back-button:hover {
+  background: var(--terracotta);
+  color: white;
+  transform: translateY(-4px);
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .journey-hero {
+    height: 620px;
+  }
+
+  .journey-summary {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .journey-highlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .journey-included {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-included-image {
+    min-height: 480px;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .journey-hero {
+    height: 560px;
+  }
+
+  .journey-hero-content {
+    padding: 0 6vw 60px;
+  }
+
+  .journey-hero h1 {
+    font-size: 4.8rem;
+    letter-spacing: -3px;
+  }
+
+  .journey-hero p {
+    font-size: 1.1rem;
+  }
+
+  .journey-hero-number {
+    right: 6vw;
+    bottom: 65px;
+  }
+
+  .journey-summary {
+    padding: 75px 6vw;
+  }
+
+  .journey-summary h2 {
+    font-size: 3.4rem;
+  }
+
+  .journey-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-fact:last-child {
+    grid-column: span 1;
+  }
+
+  .journey-highlights {
+    padding: 75px 6vw;
+  }
+
+  .journey-highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-itinerary {
+    padding: 80px 6vw;
+  }
+
+  .itinerary-item {
+    grid-template-columns: 55px 1fr 20px;
+    gap: 15px;
+    padding: 28px 0;
+  }
+
+  .itinerary-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .itinerary-content p {
+    font-size: .7rem;
+  }
+
+  .journey-included-content {
+    padding: 70px 7vw;
+  }
+
+  .journey-booking {
+    min-height: 500px;
+    padding: 80px 6vw;
+  }
+
+  .booking-orbit {
+    width: 250px;
+    height: 250px;
+  }
+
+  .journey-faq {
+    padding: 75px 6vw;
+  }
+
+  .faq-list summary {
+    font-size: 1rem;
+    gap: 15px;
+  }
+
+  .journey-back {
+    min-height: 400px;
+    padding: 75px 6vw;
+  }
+}
